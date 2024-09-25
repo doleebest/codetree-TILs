@@ -2,4 +2,5 @@ import sys
 n= int(sys.stdin.readline())
 i=1
 while i<=n :
-    print(*)
+    print("*")
+    i+=1
