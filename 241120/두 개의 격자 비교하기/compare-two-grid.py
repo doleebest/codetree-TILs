@@ -6,7 +6,11 @@ arr3 = [[0 for _ in range(n)] for _ in range(m)]
 for i in range(n) :
     for j in range(m) :
         if arr1[i][j] == arr2[i][j] :
-            arr3[i][j] = 1
-        else : 
             arr3[i][j] = 0
-print(arr3)
+        else : 
+            arr3[i][j] = 1
+
+for i in range(n) :
+    for j in range(m) :
+        print(arr3[i][j], end=" ")
+    print()
