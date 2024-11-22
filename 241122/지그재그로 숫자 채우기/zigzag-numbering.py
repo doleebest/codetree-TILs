@@ -15,3 +15,8 @@ for col in range(m):
         for row in range(n - 1, -1, -1):
             answer[row][col] = count
             count += 1
+
+for i in range(n) :
+    for j in range(m) :
+        print(arr[i][j],end=" ")
+    print()
