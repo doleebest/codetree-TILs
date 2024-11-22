@@ -1,22 +1,25 @@
-import sys
-n,m = map(int,sys.stdin.readline().split())
-arr = [0 for _ in range(n) for _ in range(m)]
+# 변수 선언 및 입력
+n, m = tuple(map(int, input().split()))
+answer = [
+    [0 for _ in range(m)]
+    for _ in range(n)
+]
 
-# 열 번호가 짝수인 경우
+count = 0
+
+
 for col in range(m):
     if col % 2 == 0:
         for row in range(n):
             answer[row][col] = count
             count += 1
-
-# 열 번호가 홀수인 경우
-for col in range(m):
-    if col % 2 != 0:
+    else:
         for row in range(n - 1, -1, -1):
             answer[row][col] = count
             count += 1
 
-for i in range(n) :
-    for j in range(m) :
-        print(arr[i][j],end=" ")
+# 출력
+for row in range(n):
+    for col in range(m):
+        print(answer[row][col], end = ' ')
     print()
